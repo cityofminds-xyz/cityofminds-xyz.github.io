@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>City of Minds — Official Site</title>
+  <meta name="description" content="City of Minds is a passion project sharing culture, adventure, books, and movies. Join 98k+ on Instagram and support the journey." />
+
+  <!-- Canonical (set to your final domain) -->
+  <link rel="canonical" href="https://YOUR_DOMAIN/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.png" type="image/png" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="City of Minds — Official Site" />
+  <meta property="og:description" content="Culture, adventure, books and movies. Join 98k+ on Instagram and support the journey." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cityofminds.xyz/" />
+  <meta property="og:image" content="https://cityofminds.xyz/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    :root {
+      --bg: #ff7e33; /* sunset orange */
+      --fg: #ffffff; /* text */
+      --muted: #ffe0cc;
+      --accent: #ffcc88; /* warm highlight */
+      --card: rgba(255, 255, 255, 0.05);
+      --ring: rgba(255, 204, 136, 0.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: "Georgia", "Times New Roman", serif;
+      background: linear-gradient(180deg, #ff7e33 0%, #ffb366 100%);
+      color: var(--fg);
+      display: grid; place-items: center;
+    }
+    .wrap { width: min(960px, 92vw); padding: 56px 20px; text-align: center; }
+    .logo { display: inline-flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+    .logo img { width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 6px 24px rgba(0,0,0,.35); }
+    h1 { font-size: clamp(32px, 6vw, 56px); line-height: 1.1; margin: 8px 0 12px; font-family: "Georgia", serif; }
+    p.sub { font-size: clamp(16px, 2.4vw, 20px); color: var(--muted); margin: 0 0 28px; font-style: italic; }
+    .cta {
+      display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin: 28px 0 8px;
+    }
+    .btn {
+      appearance: none; border: 0; border-radius: 999px; padding: 14px 20px; font-weight: 600; cursor: pointer; text-decoration: none; color: var(--fg);
+      background: linear-gradient(180deg, #ffcc88, #ff9966);
+      box-shadow: 0 8px 24px var(--ring), inset 0 -1px 0 rgba(255,255,255,.25);
+      transition: transform .08s ease, box-shadow .2s ease, filter .2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); filter: brightness(1.05); }
+    .btn:active { transform: translateY(0); }
+    .btn.secondary { background: rgba(0,0,0,0.25); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25); color: #fff; }
+
+    .card {
+      margin: 36px auto 18px; background: var(--card); border: 1px solid rgba(255,255,255,.15);
+      border-radius: 24px; padding: 22px; max-width: 720px; text-align: left; box-shadow: 0 10px 40px rgba(0,0,0,.35);
+    }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .row a { color: var(--fg); text-decoration: none; opacity: .9; }
+    .row a:hover { opacity: 1; text-decoration: underline; }
+
+    footer { margin-top: 26px; color: #fff5e6; font-size: 14px; font-style: italic; }
+
+    @media (min-width: 680px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <div class="logo">
+      <img src="/logo.png" alt="City of Minds logo" />
+      <strong>City of Minds</strong>
+    </div>
+
+    <h1>Welcome to <span style="color: var(--accent);">City of Minds</span></h1>
+    <p class="sub">A passion project with 98k+ followers on Instagram — exploring culture, adventure, books, and movies. Thank you for supporting this journey. 🌍📚🎬</p>
+
+    <div class="cta">
+      <a class="btn" href="https://instagram.com/cityofminds" target="_blank" rel="noopener">Follow on Instagram</a>
+      <a class="btn secondary" href="https://www.buymeacoffee.com/cityofminds" target="_blank" rel="noopener">Support with a coffee ☕</a>
+    </div>
+
+    <section class="card" id="links" aria-labelledby="links-title">
+      <h2 id="links-title" style="margin:0 0 10px; font-size: 20px; letter-spacing: .02em;">Articles and Essays</h2>
+      <div class="grid">
+        <div class="row"><span>On Culture</span><a href="#">Read →</a></div>
+        <div class="row"><span>Adventure stories</span><a href="#">Read →</a></div>
+        <div class="row"><span>Books & Movies reflections</span><a href="#">Read →</a></div>
+      </div>
+    </section>
+
+    <footer>
+      <small>© <span id="year"></span> City of Minds · Made with love</small>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
